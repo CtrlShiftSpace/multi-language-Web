@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>multi-language demo</title>
+	<!--語系js -->
+	<script type="text/javascript" src="js/callbackJson.js"></script>
+</head>
+<body>
+	
+	<p id="language"></p>
+	<p id="day"></p>
+	<p id="weather"></p>
+
+
+	<script type="text/javascript">
+
+		var assignIdValue = function(returned_data) {
+			jsonData = JSON.parse(returned_data);
+			//轉為json格式
+
+			document.getElementById('language').innerHTML  = jsonData.language;
+			document.getElementById('day').innerHTML  = jsonData.day;
+			document.getElementById('weather').innerHTML  = jsonData.weather;
+
+  		}
+
+		checkLang(assignIdValue);
+
+	</script>
+
+</body>
+</html>
